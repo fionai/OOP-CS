@@ -16,8 +16,7 @@ namespace Fraction
             Console.Write($"{Numerator}/{Denominator}");
         }
 
-        public int GCD() //какая-то ерунда.
-                         //Не дает вынести while за скобки, ругается на ЛОКАЛЬНЫЕ переменные 
+        public int GCD() 
         {
             int big, small, buf;
             if (Numerator != 0 & Denominator != 0)
@@ -26,28 +25,21 @@ namespace Fraction
                 {
                     big = Numerator;
                     small = Denominator;
-                    while ((big % small) != 0)
-                    {
-                        buf = big % small;
-                        big = small;
-                        small = buf;
-                    }
-                    return small;
                 }
                 else if (Denominator > Numerator)
                 {
                     big = Denominator;
                     small = Numerator;
-                    while ((big % small) != 0)
-                    {
-                        buf = big % small;
-                        big = small;
-                        small = buf;
-                    }
-                    return small;
                 }
-                else 
+                else
                     return Numerator;
+                while ((big % small) != 0)
+                {
+                    buf = big % small;
+                    big = small;
+                    small = buf;
+                }
+                return small; 
             }
             else return 1;
         }
