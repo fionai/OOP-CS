@@ -44,7 +44,7 @@ namespace OOP
         //methods
         public void Print()
         {
-            Console.WriteLine($"X = {X}, Y = {Y}");
+            Console.WriteLine($"X = {X}, Y = {Y}"); 
         }
 
         public double Distance(Point other)
