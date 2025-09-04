@@ -51,5 +51,5 @@ namespace OOP
         {
             return Math.Sqrt((this.X - other.X) * (this.X - other.X) + (this.Y - other.Y) * (this.Y - other.Y));
         }
-    }
+    } //Point
 }
