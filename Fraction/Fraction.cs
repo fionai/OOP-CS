@@ -74,6 +74,23 @@ namespace Fraction
                 return result;
             }
         }
+        public static Fraction operator+ (Fraction n1, Fraction other)
+        {
+            Fraction result = new Fraction();
+            if (n1.Denominator != 0 & other.Denominator != 0)
+            {
+                result.Numerator = n1.Numerator * other.Denominator + other.Numerator * n1.Denominator;
+                result.Denominator = n1.Denominator * other.Denominator;
+                result.Normal();
+                return result;
+            }
+            else
+            {
+                result.Numerator = 0;
+                result.Denominator = 1;
+                return result;
+            }
+        }
         public Fraction Sub(Fraction other)
         {
             Fraction result = new Fraction();
@@ -81,6 +98,23 @@ namespace Fraction
             {
                 result.Numerator = Numerator * other.Denominator - other.Numerator * Denominator;
                 result.Denominator = Denominator * other.Denominator;
+                result.Normal();
+                return result;
+            }
+            else
+            {
+                result.Numerator = 0;
+                result.Denominator = 1;
+                return result;
+            }
+        }
+        public static Fraction operator -(Fraction n1, Fraction other)
+        {
+            Fraction result = new Fraction();
+            if (n1.Denominator != 0 & other.Denominator != 0)
+            {
+                result.Numerator = n1.Numerator * other.Denominator - other.Numerator * n1.Denominator;
+                result.Denominator = n1.Denominator * other.Denominator;
                 result.Normal();
                 return result;
             }
@@ -109,6 +143,23 @@ namespace Fraction
                 return result;
             }
         }
+        public static Fraction operator *(Fraction n1, Fraction other)
+        {
+            Fraction result = new Fraction();
+            if (n1.Denominator != 0 & other.Denominator != 0)
+            {
+                result.Numerator = n1.Numerator * other.Numerator;
+                result.Denominator = n1.Denominator * other.Denominator;
+                result.Normal();
+                return result;
+            }
+            else
+            {
+                result.Numerator = 0;
+                result.Denominator = 1;
+                return result;
+            }
+        }
 
         public Fraction Div(Fraction other)
         {
@@ -117,6 +168,23 @@ namespace Fraction
             {
                 result.Numerator = Numerator * other.Denominator;
                 result.Denominator = Denominator * other.Numerator;
+                result.Normal();
+                return result;
+            }
+            else
+            {
+                result.Numerator = 0;
+                result.Denominator = 1;
+                return result;
+            }
+        }
+        public static Fraction operator /(Fraction n1, Fraction other)
+        {
+            Fraction result = new Fraction();
+            if (n1.Denominator != 0 & other.Denominator != 0)
+            {
+                result.Numerator = n1.Numerator * other.Denominator;
+                result.Denominator = n1.Denominator * other.Numerator;
                 result.Normal();
                 return result;
             }

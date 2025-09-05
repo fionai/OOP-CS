@@ -26,22 +26,41 @@ namespace Fraction
 
             Fraction result = new Fraction();
             result = num1.Sum(num2);
-            Console.Write($"{num1.Numerator}/{num1.Denominator} + {num2.Numerator}/{num2.Denominator} = ");
+            Console.Write($"{num1.Numerator}/{num1.Denominator} Sum {num2.Numerator}/{num2.Denominator} \t= ");
+            result.Print();
+            Console.WriteLine();
+
+            result = num1 + num2;
+            Console.Write($"{num1.Numerator}/{num1.Denominator} + {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print();
             Console.WriteLine();
 
             result = num1.Sub(num2);
-            Console.Write($"{num1.Numerator}/{num1.Denominator} - {num2.Numerator}/{num2.Denominator} = ");
+            Console.Write($"{num1.Numerator}/{num1.Denominator} Sub {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print(); 
             Console.WriteLine();
 
+            result = num1 - num2;
+            Console.Write($"{num1.Numerator}/{num1.Denominator} - {num2.Numerator}/{num2.Denominator} \t= ");
+            result.Print();
+            Console.WriteLine();
+
             result = num1.Mul(num2);
-            Console.Write($"{num1.Numerator}/{num1.Denominator} * {num2.Numerator}/{num2.Denominator} = ");
+            Console.Write($"{num1.Numerator}/{num1.Denominator} Mul {num2.Numerator}/{num2.Denominator} \t= ");
+            result.Print();
+            Console.WriteLine();
+
+            result = num1 * num2;
+            Console.Write($"{num1.Numerator}/{num1.Denominator} * {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print();
             Console.WriteLine();
 
             result = num1.Div(num2);
-            Console.Write($"{num1.Numerator}/{num1.Denominator} / {num2.Numerator}/{num2.Denominator} = ");
+            Console.Write($"{num1.Numerator}/{num1.Denominator} Div {num2.Numerator}/{num2.Denominator} \t= ");
+            result.Print();
+            Console.WriteLine();
+            result = num1 / num2;
+            Console.Write($"{num1.Numerator}/{num1.Denominator} / {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print();
             Console.WriteLine();
         }
