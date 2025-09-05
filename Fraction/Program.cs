@@ -59,6 +59,7 @@ namespace Fraction
             Console.Write($"{num1.Numerator}/{num1.Denominator} Div {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print();
             Console.WriteLine();
+
             result = num1 / num2;
             Console.Write($"{num1.Numerator}/{num1.Denominator} / {num2.Numerator}/{num2.Denominator} \t= ");
             result.Print();
